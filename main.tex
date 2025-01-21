@@ -5,7 +5,7 @@
 \usepackage{amsfonts}
 \usepackage[right=3cm, left=2.5cm, top=3cm, bottom=3.5cm]{geometry}
 % \usepackage{hyperref}          % Enlaces y referencias
-\usepackage[style=apa]{biblatex}
+\usepackage[style=apa,backend=biber]{biblatex}
 \usepackage{csquotes}          % Manejo de citas (opcional, útil para biblatex)
 \addbibresource{refs.bib}
 \usepackage[spanish]{babel}
@@ -22,6 +22,22 @@
 \newpage
 \input{p1-intro.tex}
 \input{p2-objetives.tex}
+\section{Gases Reales}
+\input{p3.tex}
+\input{p4.tex}
+
+\section{Concluciones}
+
+\begin{itemize}
+\item El estudio de partículas interactuanes se vuelve complejo, por lo que
+se debe simplificar a un sistema pequeño y simplificado para luego a partir
+de este poder generalizar estas ecuaciones a sistemas un poco más complejos
+aprovecho el caracter aditivo de la energía libre.
+
+\item El desarrollo por potencias de densidad fue un método inspirado por
+Gibs para escribir cómo una serie las interactuantes.
+\end{itemize}
 
 
+\printbibliography 
 \end{document}
