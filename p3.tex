@@ -1,15 +1,15 @@
 \subsection{Gases Reales}
 La ecuación de estado de un gas perfecto puede aplicarse
-frecuentmente y con suficiente precisión a los gases reales. Sin embargo, esta aproximación
+frecuentemente y con suficiente precisión a los gases reales. Sin embargo, esta aproximación
 puede resultar insuficiente y surge entonces la necesidad de tener en cuenta las desviaciones de
 gas real respecto de un gas perfecto debidas a la interacción de las moléculas que lo constituyen.
 \parencite[p.~261]{landau}
 
 Tomando las condiciones de~\parencite[p.~261]{landau} 
 ``\ldots considerando el gas hasta tal punto enrarecido, que sea posible prescindir de las colisiones ternarias, cuaternarias, etc.,
-de las moléculas entre sí suponor que su interacción se efectúa solamente mediante colisiones binarias.''
+de las moléculas entre sí suponer que su interacción se efectúa solamente mediante colisiones binarias.''
 
-Con esto en mente considremos prinmero un gas monoatomico así la energía total de $N$ átomos
+Con esto en mente consideremos primero un gas mono-atómico así la energía total de $N$ átomos
 del sistema será
 
 \begin{equation}
@@ -20,25 +20,25 @@ del sistema será
 donde $p$ es el momento lineal de cada partícula y $U = U(q)$ es energía
 de interacción dos a dos.
 
-De las deduciones para un gas ideal clasicos deducidas por~\parencite[p.~205, traducción propia]{Swendsen2012} ``
+De las deducciones para un gas ideal clásicos deducidas por~\parencite[p.~205, traducción propia]{Swendsen2012} ``
 \ldots la integral es conocida la transformada de Laplace. Es similar a a la
-transformada de furier, pero el factor en el exponente es real, en vez de imaginario''
+transformada de Fourier, pero el factor en el exponente es real, en vez de imaginario''
 
 \begin{equation}
     \label{eq:partition}
     Z(T, V, N) = \int \Omega(E, V, N) e^{-\beta E} dE
 \end{equation}
 
-Donde $T$ es la temperatura, $V$ el volumen $N$ el número de partículas del sistema, Energ	
+Donde $T$ es la temperatura, $V$ el volumen $N$ el número de partículas del sistema, Energía
 del sistema y $\beta = 1/kT$, $k$ es la constante de Boltzmann.
 
-Solo es interes la integral
+Solo es interés la integral
 \begin{equation}
     Z = \int e^{-\beta E} dE
 \end{equation}
 
 Por lo que remplazando~\ref{eq:energia-total} en la ecuación anterior y
-solo quedandos con la integral para $U$
+solo quedados con la integral para $U$
 \begin{equation}
     \int \cdots \int e^{-\beta U} dV_1dV_2 \ldots dV_N,
 \end{equation}
@@ -46,7 +46,7 @@ solo quedandos con la integral para $U$
 donde $dV_i = dx_i dy_i dz_i$. Si $U = 0$ entonces esta integral sería
 $V^N$ y como la integral del primer término de~\ref{eq:energia-total}
 es la energía del gas perfecto al cual llamaremos $F_p$ así
-usando las propiedades de logaritmos podemes hacer
+usando las propiedades de logaritmos podemos hacer
 
 \begin{equation}
     F = F_p - T \ln \frac{1}{V^N} \int\ldots\int e^{-\beta U} dV_1dV_2 \ldots dV_N
@@ -58,12 +58,12 @@ Sumando uno y restando uno a la expresión anterior
     F = F_p - T \ln  \left[\frac{1}{V^N} \int\ldots\int \left(e^{-\beta U}  - 1\right)dV_1dV_2 \ldots dV_N + 1\right]
 \end{equation}
 
-Para calcular los calculos faltantes vamos a usar la supociciones de
-\parencite[p.~262]{landau} ``Sunpondremos que el gas no solo está suficientemente
-enrarecido, si también que la cantidad del mismo es suficientemente pequña 
+Para calcular los cálculos faltantes vamos a usar la suposiciones de
+\parencite[p.~262]{landau} ``Supondremos que el gas no solo está suficientemente
+enrarecido, si también que la cantidad del mismo es suficientemente pequeña 
 como para que se pueda suponer que en él no chocan a la vez más de un par de átomos.
-Con esto se evita el problema de las colisiones de más de dos atomos los cuales solo
-arían que el problema se agrande.
+Con esto se evita el problema de las colisiones de más de dos átomos los cuales solo
+harían que el problema se agrande.
 
 Por otra  parte la forma de elegir estos átomos está dado por
 \begin{equation}
@@ -77,7 +77,7 @@ Así la integral anterior se puede escribir como
     \int\ldots\int \int\ldots\int \left(e^{-\beta U_{12}}  - 1\right)dV_1dV_2 \ldots dV_N
 \end{equation}
 
-Donde $U_{12}$ es la aenergía de dos átomos (sin importar cuales sean debido
+Donde $U_{12}$ es la aspergía de dos átomos (sin importar cuales sean debido
 a su identidad) ademas podemos escribir $N^2$ debido a que $N$ es muy grande,
 ademas utilizando el hecho que $\ln(1 + x) \approx x$
 así obtenemos
@@ -87,10 +87,10 @@ así obtenemos
 \end{equation}
 
 Si en vez de las coordenadas de los dos átomos se introduces las coordenadas
-de su centro de masa común y sus cordenas relativas, entonces
-$U_{12}$ solo dependerá de estas dos últimas la cual podemos reprecentar por
-$dV$ y como podemos integrar con respecto al centro de masas comun lo
-cual dará un nuevo volument así obtenemos
+de su centro de masa común y sus condenadas relativas, entonces
+$U_{12}$ solo dependerá de estas dos últimas la cual podemos representar por
+$dV$ y como podemos integrar con respecto al centro de masas común lo
+cual dará un nuevo volumen así obtenemos
 
 \begin{equation}
     F = F_p + \frac{N^2TB(\beta)}{V}

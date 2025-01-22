@@ -1,6 +1,6 @@
 \subsection{Ideas de J. W. Gibbs: Desarrollo en potencias de la densidad}
 
-La expresión presenta, esencialemente, los dos primer términos del desarrollo
+La expresión presenta, esencialmente, los dos primer términos del desarrollo
 de potencias de $1/V$
 
 \begin{equation}
@@ -9,16 +9,38 @@ de potencias de $1/V$
     \right)
 \end{equation}
 
-como ya se mensiono, el primer término reprecenta a un gas perfecto,
-con el segundo termino a particulas interactuantes par y agregando 
-el tercer término para particulas interactuantes cuando son 3.
+como ya se mencionó, el primer término representa a un gas perfecto,
+con el segundo termino a partículas interactuantes par y agregando 
+el tercer término para partículas interactuantes cuando son 3.
 
 Para deducir estos coeficientes podemos hacer lo siguiente.
 
-Para N = 1, ya se conoce
+\parencite[p.~124]{landau} Define la formula para el potencial $\Omega$
+como (Se a modificado la temperatura por $\beta = kT$)
+\begin{equation}
+    \label{eq:potential}
+    \Omega = -T \ln \left[
+        \sum_{N}\frac{e^{-\beta\mu N}}{N!}\int e^{-\beta E_N(p, q)} d\Gamma_N
+    \right]
+\end{equation}
+
+
+
+Para $N = 0$ Se tiene que $E_0 = 0$
+
+Para N = 1, Solo se tiene la energía cinética
 \begin{equation}
     E_1(p, 1) = p^2/2m
 \end{equation}
+
+Entonces Se tiene
+
+\begin{align*}
+    e^{\beta\mu} \int e^{-\beta E_N(p, q)} d\Gamma_N
+     &= \frac{e^{\beta\mu}}{{(2\pi\hbar)}^3}  \int e^{-\beta p^2/2m} dp
+     = \frac{e^{\beta\mu}}{{(2\pi\hbar)}^3} \sqrt{\frac{2 \pi m}{\beta}}^3\\
+     &= {\left(\frac{m}{2\pi\hbar^2}\right)}^{3/2} e^{\beta\mu}
+\end{align*}
 
 Para $N = 2$, se tiene la energía cinética más la energía
 de su interacción $U_{12}$
@@ -27,6 +49,20 @@ de su interacción $U_{12}$
     E_2(p, q) = \sum_{i=1}^{2} \frac{p_i^2}{2m} + {U_{12}}
 \end{equation}
 
+Por lo que el tercer sumando será
+
+\begin{align}
+   e^{2\beta\mu} \int e^{-\beta E_2(p, q)} d\Gamma_N
+   &= \frac{e^{\beta\mu}}{{(2\pi\hbar)}^3}^2
+    \int e^{-\beta p_1^2/2m} dp_1
+    \int e^{-\beta p_2^2/2m} dp_2
+   \int \int e^{-\beta U_{12}} dV_1 dV_2\\
+    &= {{\left(\frac{m}{2\pi\hbar^2}\right)}^{3/2} e^{\beta\mu}}^2
+\int \int e^{-\beta U_{12}} dV_1 dV_2
+\end{align}
+
+
+
 De igual forma para $N = 3$ con energía de interacción $U_{123}$
 
 \begin{equation}
@@ -34,15 +70,8 @@ De igual forma para $N = 3$ con energía de interacción $U_{123}$
 \end{equation}
 
 
-\parencite[p.~124]{landau} Define la formula para el potencial $\Omega$
-como (Se a moduficado la temperatura por $\beta = kT$)
-\begin{equation}
-    \Omega = -T \ln \left[
-        \sum_{N}e^{-T\mu N}\int e^{-T E_N(p, 1) d\Gamma_N}
-    \right]
-\end{equation}
-
-remplazando esta la penultima ecuación en esta, usando la notación
+sustituyendo y haciendo las integrales (es de la misma forma)
+remplazando esta la penúltima ecuación en esta, usando la notación
 
 \begin{equation}
     \xi = \frac{e^{\mu/T}}{{(2\pi\hbar)}^2}
@@ -62,7 +91,7 @@ Así podemos obtener
 \end{equation}
 
 Si medimos con respecto al primer átomo, se reduce la multiplicidad de
-la integrarl así se tiene
+la integral así se tiene
 
 \begin{equation}
     \Omega = -PV = -T \ln \left[
